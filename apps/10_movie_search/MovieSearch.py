@@ -44,18 +44,18 @@ def find_movies(title):
     # Replace spaces with %20
     title_encoded = title.replace(" ", "%20")
     url = f'http://movie_service.talkpython.fm/api/search/{title_encoded}'
-
     response = requests.get(url)
     data = response.json()
 
     # get movie data that stored in hits object
     movie_data = data.get("hits")
 
-    #
+    # Creating Movie Objects
     movies = [
         MovieResult(**md) for md in movie_data
     ]
 
+    # sort the movie by year
     movies.sort(key=lambda m: -m.year)
 
     return movies
