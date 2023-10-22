@@ -22,7 +22,7 @@ def game_loop():
         SmallAnimal("Toad", 1),
         SmallAnimal("Bat", 5),
         Creature("Tiger", 12),
-        Dragon("Dragon", 50),
+        Dragon("Fire Dragon", 50, True),
         Wizard("Evil Wizard", 1000)
     ]
 
@@ -58,6 +58,7 @@ def game_loop():
             print()
 
         else:
+            print("OK, exiting game... see you!")
             break
 
 

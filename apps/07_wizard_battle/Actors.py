@@ -23,6 +23,8 @@ class Wizard(Creature):
         # rule of the game
         if player_role >= creature_role:
             print(f"The wizard has triumphant over the {creature.name}!")
+            # increase the level of the player by 1
+            self.level += 1
             return True     # the creature will be removed from the list
         else:
             print(f"The wizard {self.name} has been defeated by the {creature.name}")
@@ -37,4 +39,12 @@ class SmallAnimal(Creature):
 
 
 class Dragon(Creature):
-    print("this is Dragon")
+    def __init__(self, name, level, breath_fire):
+        super().__init__(name, level)
+        self.breath_fire = breath_fire
+
+    def roll_the_dice(self):
+        dragon_role = super().roll_the_dice()
+        fire_modifier = 5 if self.breath_fire else 1
+        dragon_role *= fire_modifier
+        return dragon_role
