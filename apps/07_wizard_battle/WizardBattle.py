@@ -23,7 +23,7 @@ def game_loop():
         SmallAnimal("Bat", 5),
         Creature("Tiger", 12),
         Dragon("Fire Dragon", 50, True),
-        Wizard("Evil Wizard", 1000)
+        Wizard("Evil Wizard", 100)
     ]
 
     while looping:
