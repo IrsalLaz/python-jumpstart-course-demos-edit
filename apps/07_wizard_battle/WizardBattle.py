@@ -38,7 +38,7 @@ def game_loop():
                 # if player attack the creature and return true, then the creature will be removed from the list
                 creatures.remove(creature)
             else:
-                # if the creature win, then game pause for 10 seconds
+                # if the creature win he won't be removed from list, then game pause for 10 seconds
                 time.sleep(10)
                 print("\nThe wizard respawned with full health!")
             print()
@@ -54,7 +54,8 @@ def game_loop():
             print(f"The wizard {player.name} look around and sees: ")
             # print all remaining creature then continue
             for creature in creatures:
-                print(f" * A level {creature.level} of {creature.name}.")
+                print(creature)
+                # print(f" * A level {creature.level} of {creature.name}.")
             print()
 
         else:
