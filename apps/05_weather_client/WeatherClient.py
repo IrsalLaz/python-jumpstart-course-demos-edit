@@ -36,7 +36,7 @@ def weather_api(city_name):
         country = data["sys"]["country"]
         temp = data["main"]["temp"]     # convert to celsius or fahrenheit
         temp = temp_converter(temp)
-        cloud = data["weather"][0]["main"]
+        cloud = data["weather"][0]["description"]  # description
 
         show_weather(city, country, temp, cloud)
     else:
