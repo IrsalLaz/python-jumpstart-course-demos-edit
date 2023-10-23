@@ -51,7 +51,7 @@ def game_loop():
             print()
 
         elif action == "l":
-            print("The wizard {player} look around and sees: ")
+            print(f"The wizard {player.name} look around and sees: ")
             # print all remaining creature then continue
             for creature in creatures:
                 print(f" * A level {creature.level} of {creature.name}.")
