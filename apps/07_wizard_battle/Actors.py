@@ -6,6 +6,9 @@ class Creature:
         self.name = name
         self.level = level
 
+    def __str__(self):
+        return f" * A level {self.level} of {self.name}."
+
     def roll_the_dice(self):
         return random.randint(1, 12) * self.level
 
